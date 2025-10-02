@@ -314,6 +314,7 @@ process.on('SIGTERM', () => {
     process.exit(0);
 });
 
+
 process.on('SIGINT', () => {
     console.log('\n🛑 Получен сигнал SIGINT. Завершаю работу бота...');
     bot.stopPolling();

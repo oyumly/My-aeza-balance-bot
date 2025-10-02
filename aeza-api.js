@@ -173,6 +173,7 @@ class AezaAPI {
                 message += `🎯 Получаемый процент: <b>${currentPercent}%</b>\n`;
             }
 
+            
             const email = account.email || 'Не указан';
             message += `📧 Email: <tg-spoiler>${email}</tg-spoiler>`;
             
@@ -184,43 +185,6 @@ class AezaAPI {
         }
     }
 
-    formatServersInfo(servicesData) {
-        try {
-            if (!servicesData || !servicesData.items || servicesData.items.length === 0) {
-                return '📭 У вас нет активных серверов.';
-            }
-
-            const servers = servicesData.items;
-            let message = '🖥️ **Ваши серверы:**\n\n';
-
-            const serversToShow = servers.slice(0, 10);
-
-            serversToShow.forEach(server => {
-                const serverId = server.id || 'N/A';
-                const name = server.name || 'Без названия';
-                const status = server.status || 'unknown';
-
-                const statusEmoji = {
-                    'active': '✅',
-                    'suspended': '⏸️',
-                    'installing': '⚙️',
-                    'error': '❌'
-                }[status] || '❓';
-
-                message += `${statusEmoji} **${name}** (ID: ${serverId})\n`;
-                message += `   Статус: ${status}\n\n`;
-            });
-
-            if (servers.length > 10) {
-                message += `... и ещё ${servers.length - 10} серверов\n\n`;
-            }
-
-            return message;
-        } catch (error) {
-            console.error('Ошибка форматирования серверов:', error);
-            return '❌ Ошибка получения данных о серверах.';
-        }
-    }
 
     getCurrentTime() {
         return new Date().toLocaleString('ru-RU', {

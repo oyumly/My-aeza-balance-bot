@@ -1,7 +1,7 @@
 {
-  "name": "aeza-balance-bot",
+  "name": "My-aeza-balance-bot",
   "version": "1.0.0",
-  "description": "Telegram бот для отображения баланса Aeza (неофициальный)",
+  "description": "Telegram бот для отображения мониторинга изменений реф. баланса, inline режима, Aeza (неофициальный)",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js",

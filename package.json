@@ -1,14 +1,14 @@
 {
   "name": "aeza-balance-bot",
   "version": "1.0.0",
-  "description": "Telegram бот для отображения баланса AEZA",
+  "description": "Telegram бот для отображения баланса Aeza (неофициальный)",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js",
     "dev": "nodemon bot.js"
   },
-  "keywords": ["telegram", "bot", "aeza", "balance"],
-  "author": "Your Name",
+  "keywords": ["telegram", "bot", "aeza", "balance", "unofficial"],
+  "author": "oyumly",
   "license": "MIT",
   "dependencies": {
     "node-telegram-bot-api": "^0.64.0",

@@ -170,7 +170,7 @@ class AezaAPI {
 
             if (referralState.state && referralState.state.current) {
                 const currentPercent = (referralState.state.current.percent * 100).toFixed(1);
-                message += `🎯 Реферальная ставка: <b>${currentPercent}%</b>\n`;
+                message += `🎯 Получаемый процент: <b>${currentPercent}%</b>\n`;
             }
 
             const email = account.email || 'Не указан';
@@ -359,7 +359,7 @@ class AezaAPI {
         const message = `🇷🇺 <b>Российский аккаунт (.ru) #${maskedId}</b>\n\n` +
             `💸 Реферальный баланс: <b>${withdrawBalance.toFixed(2)} ₽</b>\n` +
             `📈 Заработано за все время: <b>${monthEarned.toFixed(2)} ₽</b>\n` +
-            `🎯 Реферальная ставка: <b>${currentPercent}%</b>`;
+            `🎯 Получаемый процент: <b>${currentPercent}%</b>`;
 
         return {
             type: 'article',
@@ -396,7 +396,7 @@ class AezaAPI {
         const message = `🌍 <b>Международный аккаунт (.net) #${maskedId}</b>\n\n` +
             `💸 Реферальный баланс: <b>${withdrawBalance.toFixed(2)} €</b>\n` +
             `📈 Заработано за все время: <b>${monthEarned.toFixed(2)} €</b>\n` +
-            `🎯 Реферальная ставка: <b>${currentPercent}%</b>`;
+            `🎯 Получаемый процент: <b>${currentPercent}%</b>`;
 
         return {
             type: 'article',

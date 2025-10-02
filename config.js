@@ -13,7 +13,7 @@ const config = {
 };
 
 if (!config.TELEGRAM_BOT_TOKEN) {
-    console.error('TELEGRAM_BOT_TOKEN не установлен в переменных окружения');
+    console.error('TELEGRAM_BOT_TOKEN не установлен в переменных окружения...');
     process.exit(1);
 }
 
